@@ -564,8 +564,7 @@ https://linearjitp02-playback.astro.com.my/dash-wv/linear/5108/default.mpd
 #https://linearjitp02-playback.astro.com.my/dash-wv/linear/5111/default.mpd
 
 
-#EXTINF:0 tvg-name="Lagu - Alhamdulillah" tvg-logo="https://i.ibb.co/TW57CJK/omar.jpg" group-title="OMAR HANA",Lagu - Alhamdulillah
-https://vod-playback.sooka.my/edash/p/3089633/sp/308963300/serveFlavor/entryId/1_1fxs0i9b/v/1/ev/9/flavorId/1_,j7mwwmje,2yc8444x,5vdpnyja,ke8e95zt,ho1l5fbn,tnyi3f2c,n4klu0tt,hstasrsj,/forceproxy/true/name/a.mp4.urlset/manifest.mpd
-
+##EXTINF:-1, group-title="Pesantren Rock n Dut", Pesantren Rock N Dut Episode 1
+https://token-media-vidio-com.akamaized.net/exp=1647861881~acl=/uploads/1965416/*~hmac=8048ea4327d341bedb055631a9acdba992be8a372c9652aeca774d228ab989a9/uploads/1965416/ets-playlist-1200-21f27.m3u8
 
 
