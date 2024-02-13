@@ -564,7 +564,7 @@ https://linearjitp02-playback.astro.com.my/dash-wv/linear/5108/default.mpd
 #https://linearjitp02-playback.astro.com.my/dash-wv/linear/5111/default.mpd
 
 
-#EXTINF:-1 ch-number="888" tvg-id="LIVEADHOC" group-title="Astro" tvg-logo="https://i.ytimg.com/vi/QHOnglfMNTA/hqdefault.jpg", Astro SuperSport Live 2
+#EXTINF:0 tvg-name="Lagu - Alhamdulillah" tvg-logo="https://i.ibb.co/TW57CJK/omar.jpg" group-title="OMAR HANA",Lagu - Alhamdulillah
 https://vod-playback.sooka.my/edash/p/3089633/sp/308963300/serveFlavor/entryId/1_1fxs0i9b/v/1/ev/9/flavorId/1_,j7mwwmje,2yc8444x,5vdpnyja,ke8e95zt,ho1l5fbn,tnyi3f2c,n4klu0tt,hstasrsj,/forceproxy/true/name/a.mp4.urlset/manifest.mpd
 
 
