@@ -551,7 +551,7 @@ https://linearfast02.playback.sooka.my/v1/dash/7d6144f66f990e10fc667942d522b82f8
 #EXTINF:-1 tvg-id="x.astro" tvg-logo="https://telegra.ph/file/b98309b1149a14d39490f.png" group-title="Malaysia",Travel & Taste
 https://linearfast05.playback.sooka.my/v1/dash/7d6144f66f990e10fc667942d522b82f89ae5cd9/FAST_5_Ad/dash.mpd
 
-#EXTINF:-1 ch-number="795" tvg-id="LIVEADHOC" group-title="Astro" tvg-logo="https://i.ytimg.com/vi/QHOnglfMNTA/hqdefault.jpg", Astro SuperSport Live
+#EXTINF:-1 ch-number="795" tvg-id="LIVEADHOC" group-title="Astroo" tvg-logo="https://i.ytimg.com/vi/QHOnglfMNTA/hqdefault.jpg", Astro SuperSport Live
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 ##KODIPROP:inputstream.adaptive.license_key=34b831a974501d106f6545e9f93de010:c31ef8e8ac1139b985ac3673002b7014
 ##https://linearjitp02-playback.astro.com.my/dash-wv/linear/5085/default.mpd
@@ -562,9 +562,5 @@ https://linearjitp02-playback.astro.com.my/dash-wv/linear/5108/default.mpd
 ##KODIPROP:inputstream.adaptive.license_type=clearkey
 ##KODIPROP:inputstream.adaptive.license_key=https://ck-server.danng.me/?username=Miepalong7&channelid=5111
 #https://linearjitp02-playback.astro.com.my/dash-wv/linear/5111/default.mpd
-
-
-#EXTINF:-1, group-title="Pesantren Rock n Dut", Pesantren Rock N Dut Episode 1
-https://token-media-vidio-com.akamaized.net/exp=1647861881~acl=/uploads/1965416/*~hmac=8048ea4327d341bedb055631a9acdba992be8a372c9652aeca774d228ab989a9/uploads/1965416/ets-playlist-1200-21f27.m3u8
 
 
