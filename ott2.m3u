@@ -1,0 +1,14 @@
+#EXTM3U
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://ck-server.danng.me/?username=Miepalong7&channelid=5112
+#EXTINF:-1 tvg-id="LongLongFun" tvg-name="LongLongFun" tvg-logo="https://linear-poster.astro.com.my/prod/logo/LongLongFunV1.png" group-title="Astro",Astro LongLongFun
+https://linearjitp02-playback.astro.com.my/dash-wv/linear/5112/default.mpd
+#EXTINF:-1 tvg-id="TV1" tvg-name="TV1" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/e/e2/RTMTV1-2009_%28with_slogan%29.svg/revision/latest/scale-to-width-down/250?cb=20190202041322" group-title="Astro",TV1 HD
+https://d25tgymtnqzu8s.cloudfront.net/smil:tv1/manifest.mpd
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"f7beeac200af40d5886dfe98d72fcfc8": "e863f7149e52f7526bf744034e27ce8d"}
+#KODIPROP:inputstream.adaptive.manifest_type=dash
+#EXTINF:-1 tvg-id="TV2" tvg-name="TV2" tvg-logo="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/396_144.png" group-title="Astro",TV2 HD
+https://linear08-playback.sooka.my/CH1/masterCH1.mpd
