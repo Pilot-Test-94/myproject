@@ -1,4 +1,6 @@
-#EXTINF:-1 tvg-id="TV3" tvg-logo="https://i.imgur.com/0c5WJlU.png?v=1.1.1.1" group-title="Malaysia" ch-number="103", TV3 HD
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=3afe30ee4ea24a67fe5a2ef06e83db0b:27a2f71d87bf5eb105af096fb6605d97 
 https://unifi-live03.secureswiftcontent.com/UnifiHD/live03.mpd
