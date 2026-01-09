@@ -1,0 +1,1436 @@
+/* ============================================
+   EMBY OLED MINIMAL THEME by ShadeZeRO - v4.8.1
+   Clean, modern, borderless design for OLED displays. Developed because I have OCD, probably.
+   
+   v4.8.1 Changes:
+   - File structure optimization
+   - Consolidated :root blocks
+   - Improved section organization
+   - Updated outdated version references
+   
+   v4.8 Changes:
+   - Fixed home page logo disappearing on hover
+   - Excluded .pageTitle from .headerSectionItem:hover rule
+   
+   v4.7 Changes:
+   - Added blue icon hover to detail page buttons
+   - Icons and text turn blue (#64B5F6) on hover
+   
+   TABLE OF CONTENTS:
+   1. Global Foundation
+   2. Color & Design Variables
+   3. Cards
+   4. Navigation
+   5. Header
+   6. Buttons
+   7. Dialogs
+   8. Lists & Menus
+   9. Forms & Inputs
+   10. Scrollbars
+   11. Hover Behaviors
+   ============================================ */
+
+/* Import Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* ============================================
+   GLOBAL FOUNDATION
+   ============================================ */
+
+html {
+  background: #000000 !important;
+  color: #e9e9e9 !important;
+  font-family: 'Roboto', sans-serif !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: optimizeLegibility !important;
+  letter-spacing: 0.01em !important;
+}
+
+body {
+  background: #000000 !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+/* Force font consistency across all text elements */
+* {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+/* Ensure proper text rendering for readability */
+h1, h2, h3, h4, h5, h6,
+p, span, div, button, input, textarea, select,
+.cardText, .listItemBodyText, .sectionTitle,
+.navMenuOption, .actionSheetMenuItem,
+label, .inputLabel, .selectLabel, .fieldDescription,
+.emby-select, option, .selectLabelText,
+legend, fieldset, form {
+  font-family: 'Roboto', sans-serif !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Material Icons Settings */
+.md-icon {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* ============================================
+   COLOR & DESIGN VARIABLES
+   ============================================ */
+
+:root {
+  /* Pure black backgrounds */
+  --background-hue: 0 !important;
+  --background-saturation: 0% !important;
+  --background-lightness: 0% !important;
+  
+  /* Accent colors - modern blue */
+  --theme-primary-color: #2196F3 !important;
+  --theme-accent-text-color: #64B5F6 !important;
+  --theme-primary-color-lightened: #90CAF9 !important;
+  
+  /* Override Emby's default green colors */
+  --theme-primary-color-hue: 207 !important;
+  --theme-primary-color-saturation: 90% !important;
+  --theme-primary-color-lightness: 54% !important;
+  --theme-accent-text-color-darkbg: #64B5F6 !important;
+  --theme-accent-text-color-lightbg: #2196F3 !important;
+  --theme-accent-text-color-darkbg-alt: #64B5F6 !important;
+  --theme-accent-text-color-lightbg-alt: #2196F3 !important;
+  
+  /* UI Elements */
+  --dialog-header-background: #000000 !important;
+  --card-background: #000000 !important;
+  --drawer-background: #000000 !important;
+  --header-blur-background: #000000 !important;
+  --footer-background: #000000 !important;
+  --button-background: transparent !important;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 0.75rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 1.5rem;
+  
+  /* Typography */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   CARDS - Borderless & Minimal
+   ============================================ */
+
+.cardBox,
+.card {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 3px solid transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: border-color var(--transition-fast), transform 0.2s ease !important;
+}
+
+/* Remove border from ALL nested card elements */
+.card *,
+.cardBox *,
+.cardContent,
+.cardContent-button,
+.cardContent-background,
+.cardImageContainer,
+.coveredImage,
+.card .cardBox,
+.cardBox .card {
+  border: none !important;
+  border-bottom: none !important;
+  border-radius: 0 !important;
+}
+
+.cardBox:hover,
+.card:hover {
+  background: transparent !important;
+  border-bottom-color: #2196F3 !important;
+  transform: none !important;
+  border-radius: 0 !important;
+}
+
+/* Special handling for card-hoverable elements */
+.card-hoverable:hover {
+  background: transparent !important;
+  border-bottom-color: #2196F3 !important;
+}
+
+/* Ensure nested elements don't get border on hover */
+.cardBox:hover *,
+.card:hover *,
+.card:hover .cardBox,
+.cardBox:hover .card {
+  border: none !important;
+  border-bottom: none !important;
+  border-radius: 0 !important;
+}
+
+/* Prevent double overlay on cards */
+.card:hover .cardBox,
+.card:hover .cardContent,
+.card:hover .cardContent-button,
+.card:hover .cardImageContainer,
+.cardBox:hover .cardContent,
+.cardBox:hover .cardContent-button,
+.cardBox:hover .cardImageContainer {
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+/* Remove overlay container background */
+.cardOverlayContainer,
+.cardOverlayButton,
+.cardOverlayButton-br {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.card:hover .cardOverlayContainer,
+.cardBox:hover .cardOverlayContainer {
+  background: transparent !important;
+}
+
+/* Target the specific button element */
+.cardContent-button,
+button.cardContent-button,
+.itemAction.cardContent-button {
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.cardContent-button:hover,
+button.cardContent-button:hover,
+.itemAction.cardContent-button:hover {
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+/* Card hover states for all variants */
+.card-hoverable:hover .cardContent-button,
+.card-hoverable:hover .cardContent,
+.card-hoverable:hover .cardImageContainer {
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+/* Remove rounded corners and backgrounds from card pseudo-elements */
+.cardBox::before,
+.cardBox::after,
+.cardContent::before,
+.cardContent::after,
+.cardContent-button::before,
+.cardContent-button::after {
+  border-radius: 0 !important;
+  background: transparent !important;
+  opacity: 0 !important;
+}
+
+.card:hover .cardBox::before,
+.card:hover .cardBox::after,
+.card:hover .cardContent::before,
+.card:hover .cardContent::after,
+.cardBox:hover .cardContent::before,
+.cardBox:hover .cardContent::after {
+  background: transparent !important;
+  opacity: 0 !important;
+}
+
+/* Card Images */
+.cardImage,
+.cardImageContainer {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Card Text */
+.cardText {
+  color: #e9e9e9 !important;
+  font-weight: var(--font-weight-medium) !important;
+  font-size: var(--text-sm) !important;
+  letter-spacing: 0.01em !important;
+}
+
+.cardText-secondary {
+  color: #999999 !important;
+  font-size: var(--text-xs) !important;
+  font-weight: var(--font-weight-normal) !important;
+}
+
+/* Dashboard specific cards and sections */
+.dashboardSection,
+.paperList,
+.visualCardBox,
+.itemsContainer {
+  background: transparent !important;
+}
+
+/* Remove gray from info boxes */
+.cardContent,
+.cardContent-button,
+.infoBanner {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Now Playing section - remove gray backgrounds */
+.nowPlayingBar,
+.nowPlayingBarTop,
+.nowPlayingBarInfoContainer,
+.nowPlayingBarCenter,
+.nowPlayingBarText,
+.nowPlayingBarSecondaryText,
+.mediaInfoText,
+.mediaInfoSecondaryText,
+.sessionNowPlayingInnerContent,
+.sessionNowPlayingContent {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #e9e9e9 !important;
+}
+
+/* Now Playing text colors */
+.nowPlayingBarText,
+.mediaInfoText {
+  color: #e9e9e9 !important;
+}
+
+.nowPlayingBarSecondaryText,
+.mediaInfoSecondaryText {
+  color: #999999 !important;
+}
+
+/* Aggressively remove ALL gray backgrounds from main content */
+.dashboardDocument div,
+.dashboardDocument section,
+.dashboardDocument .cardBox,
+.dashboardDocument .paperList,
+.view-dashboard div[style*="background"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Target any gray/grey colored backgrounds */
+div[style*="background-color: rgb"],
+div[style*="background: rgb"],
+div[style*="background-color: hsl"],
+div[style*="background: hsl"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* ============================================
+   CONTEXT MENUS - Ultra Minimal
+   ============================================ */
+
+/* Menu Container */
+.actionSheetScroller {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Add top margin to action sheet for breathing room */
+.actionSheet,
+.dialog.actionSheet {
+  margin-top: 8px !important;
+}
+
+/* Remove padding from action sheet padding classes */
+.actionSheetScroller-padding-inline,
+.actionSheetScroller-padding-top,
+.actionSheetScroller-padding-bottom {
+  padding: 0 !important;
+}
+
+/* Menu Items - Compact Design with Balanced Padding */
+button.actionSheetMenuItem,
+.actionSheetMenuItem {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-bottom: 2px !important;
+  min-height: 44px !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+  font-size: 14px !important;
+}
+
+/* Add balanced left/right padding */
+.actionSheetMenuItem.listItem,
+button.listItem.actionSheetMenuItem,
+.actionSheet .listItem,
+.actionSheet button.listItem,
+.actionsheetScrollSlider .listItem {
+  padding: 0 12px 0 12px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin: 0 !important;
+  margin-bottom: 2px !important;
+}
+
+/* Remove ALL backgrounds from context menu nested elements */
+.actionSheetMenuItem .listItem-content,
+.actionSheetMenuItem .listItem-content-bg,
+.actionSheetMenuItem .listItemContent-touchzoom,
+.actionSheetMenuItem .listItem-border,
+.actionSheetMenuItem .actionSheetItemImageContainer,
+.actionSheetMenuItem .defaultCardBackground,
+.actionSheetMenuItem .actionsheetListItemBody {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+}
+
+/* Menu Item Content */
+.actionSheetMenuItem .listItem-content {
+  border: none !important;
+  padding: 0 !important;
+  min-height: 44px !important;
+  height: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  overflow: visible !important;
+}
+
+/* Remove margins from icon containers and reduce width */
+.actionSheetMenuItem .listItemImageContainer,
+.actionSheetMenuItem .listItemImageContainer-margin,
+.actionSheetMenuItem .actionSheetItemImageContainer,
+.actionSheet .listItemImageContainer-margin {
+  margin: 0 !important;
+  margin-right: 8px !important;
+  width: 24px !important;
+  min-width: 24px !important;
+  max-width: 24px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Specific override for custom width containers */
+.actionSheetItemImageContainer-customwidth {
+  width: 24px !important;
+  min-width: 24px !important;
+  max-width: 24px !important;
+}
+
+/* Ensure icons themselves are properly sized */
+.actionsheetMenuItemIcon,
+.actionSheetMenuItem .listItemIcon {
+  font-size: 20px !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+/* Ensure no padding on content divs - padding is on parent listItem only */
+.actionSheet .listItem-content,
+.actionSheet .listItem-content-bg,
+.actionSheet .listItemContent-touchzoom,
+.actionsheetScrollSlider .listItem-content,
+.actionsheetScrollSlider .listItem-content-bg,
+.actionsheetScrollSlider .listItemContent-touchzoom {
+  padding: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
+/* Remove ALL borders */
+.listItem-border,
+.actionsheet-noborder {
+  border: none !important;
+}
+
+/* Text body - maximize available space */
+.actionsheetListItemBody,
+.actionSheetMenuItem .listItemBody {
+  flex: 1 !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Add padding between text and right-side icons */
+.actionsheetListItemBody-iconright,
+.listItemBody-iconright,
+.actionSheetMenuItem-iconright .listItemBody {
+  padding-right: 12px !important;
+}
+
+/* Multi-line text items - add vertical breathing room */
+.listItemBody-2-lines {
+  min-height: auto !important;
+  line-height: 1.3 !important;
+  padding: 4px 0 !important;
+}
+
+/* Single line items - minimal padding */
+.listItemBody-1-lines {
+  padding: 2px 0 !important;
+}
+
+/* Text content */
+.actionSheetItemText,
+.listItemBodyText {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  font-size: 14px !important;
+}
+
+/* Secondary text - slightly smaller */
+.listItemBodyText-secondary,
+.secondaryText.listItemBodyText {
+  font-size: 13px !important;
+}
+
+/* Hover Effect - Subtle, square corners */
+button.actionSheetMenuItem:hover .listItem-content,
+button.actionSheetMenuItem:hover .listItem-content-bg,
+button.actionSheetMenuItem:hover .listItemContent-touchzoom {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+}
+
+button.actionSheetMenuItem:focus .listItem-content,
+button.actionSheetMenuItem:focus .listItem-content-bg,
+button.actionSheetMenuItem:focus .listItemContent-touchzoom {
+  background: transparent !important;
+  background-color: transparent !important;
+  outline: none !important;
+  border-radius: 0 !important;
+}
+
+/* Apply hover to the button itself, not nested content */
+button.actionSheetMenuItem:hover {
+  background: rgba(20, 20, 20, 0.6) !important;
+  border-radius: 0 !important;
+}
+
+button.actionSheetMenuItem:focus {
+  background: rgba(30, 30, 30, 0.7) !important;
+  outline: none !important;
+  border-radius: 0 !important;
+}
+
+/* Icon Container - Minimal */
+.actionSheetItemImageContainer {
+  background: transparent !important;
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  margin-right: 12px !important;
+}
+
+/* Icons */
+.actionsheetMenuItemIcon,
+.listItemIcon {
+  color: #e9e9e9 !important;
+  font-size: 18px !important;
+}
+
+/* Text */
+.actionSheetItemText,
+.listItemBodyText {
+  color: #e9e9e9 !important;
+  font-weight: var(--font-weight-normal) !important;
+  font-size: var(--text-base) !important;
+  line-height: 1.5 !important;
+  font-family: 'Roboto', sans-serif !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* Remove Extra Padding */
+.actionSheetScroller-padding-top {
+  padding-top: 0 !important;
+}
+
+.actionSheetScroller-padding-bottom {
+  padding-bottom: 0 !important;
+}
+
+.actionSheetScroller-padding-inline {
+  padding-left: 16px !important;
+  padding-right: 0 !important;
+}
+
+/* Proper spacing between items */
+.actionsheetScrollSlider {
+  gap: 0px !important;
+}
+
+/* Remove Default Backgrounds */
+.defaultCardBackground,
+.listItem-hoverable,
+.listItemCursor,
+.listItemContent-touchzoom,
+.listItem-content-bg {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Ensure no gray backgrounds anywhere */
+.listItem-content {
+  background: transparent !important;
+}
+
+/* ============================================
+   DIALOGS - Clean Black
+   ============================================ */
+
+.dialog,
+.emby-dialog,
+div[role="dialog"] {
+  background: #000000 !important;
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+.dialog-content {
+  background: #000000 !important;
+  color: #e9e9e9 !important;
+}
+
+/* ============================================
+   BUTTONS - Transparent & Clean
+   ============================================ */
+
+.button-flat,
+.emby-button,
+.paper-icon-button-light {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #e9e9e9 !important;
+  border-radius: 0 !important;
+  transition: all var(--transition-fast) !important;
+}
+
+.button-flat:hover,
+.emby-button:hover {
+  background: rgba(20, 20, 20, 0.7) !important;
+  color: #ffffff !important;
+}
+
+/* Top menu tabs - cleaner states */
+.emby-tab-button,
+.main-tab-button {
+  color: #888888 !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid transparent !important;
+  border-radius: 0 !important;
+  transition: all var(--transition-base) !important;
+}
+
+.emby-tab-button:hover,
+.main-tab-button:hover {
+  color: #ffffff !important;
+  background: transparent !important;
+  border-bottom-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.emby-tab-button-active,
+.emby-tab-button.emby-tab-button-active {
+  color: #ffffff !important;
+  background: transparent !important;
+  border-bottom-color: #2196F3 !important;
+}
+
+.emby-tab-button-active:hover {
+  border-bottom-color: #64B5F6 !important;
+}
+
+/* Remove tab container background */
+.tabs-viewmenubar,
+.tabs-viewmenubar-backgroundcontainer,
+.tabs-viewmenubar-slider {
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+/* Collapsible section buttons - clean and minimal */
+.navDrawerCollapseButton,
+.emby-collapsible-button {
+  background: transparent !important;
+  border: none !important;
+  padding: 10px 12px 10px 16px !important;
+  margin: 1px 0 !important;
+  width: 100% !important;
+  text-align: left !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  border-radius: 0 !important;
+  transition: background var(--transition-fast) !important;
+}
+
+.navDrawerCollapseButton:hover,
+.emby-collapsible-button:hover {
+  background: rgba(30, 30, 30, 0.5) !important;
+}
+
+/* Section header text */
+.navMenuHeader,
+.emby-collapsible-title {
+  color: #888888 !important;
+  font-size: var(--text-xs) !important;
+  font-weight: var(--font-weight-semibold) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin: 0 !important;
+}
+
+/* Expand icon */
+.navDrawerCollapseIcon,
+.emby-collapse-expandIcon {
+  color: #2196F3 !important;
+  font-size: 20px !important;
+  transition: transform var(--transition-base) !important;
+}
+
+.emby-collapse-expandIconExpanded {
+  transform: rotate(180deg) !important;
+}
+
+/* ============================================
+   NAVIGATION - Sidebar
+   ============================================ */
+
+/* Nav drawer header - reduced padding */
+.navDrawerHeader {
+  padding: 8px 16px 4px 16px !important;
+  min-height: auto !important;
+}
+
+.btnNavDrawerLogo {
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: auto !important;
+}
+
+.navDrawerLogo {
+  margin: 0 !important;
+  /* Let the logo show at its natural size */
+}
+
+/* Nav drawer search form - reduced padding */
+.navDrawerSearchForm {
+  padding: 4px 16px 8px 16px !important;
+  margin: 0 !important;
+}
+
+.drawer,
+.navDrawer,
+.mainDrawer {
+  background: #000000 !important;
+  border: none !important;
+}
+
+/* Sidebar menu items - tight spacing */
+.navMenuOption {
+  background: transparent !important;
+  border: none !important;
+  border-left: 2px solid transparent !important;
+  padding: 0 !important;
+  margin: 1px 0 !important;
+  border-radius: 0 !important;
+  transition: all var(--transition-base) !important;
+}
+
+/* Menu headers and collapsible sections */
+.navMenuHeader,
+.navDrawerCollapseButton,
+.emby-collapsible-title {
+  color: #888888 !important;
+}
+
+/* Expandable section items */
+.navDrawerCollapseContent .listItemBodyText,
+.collapseContent .listItemBodyText {
+  color: #e9e9e9 !important;
+}
+
+/* Sidebar item content - minimal padding */
+.navMenuOption .listItem-content,
+.navMenuOption .navMenuOption-listItem-content,
+.navMenuOption .listItem-content-bg {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 0 0 24px !important;
+  border-radius: 0 !important;
+}
+
+/* Sidebar hover - modern left border indicator */
+.navMenuOption:hover {
+  background: transparent !important;
+  border-left-color: rgba(255, 255, 255, 0.3) !important;
+  border-radius: 0 !important;
+}
+
+.navMenuOption:hover .listItemBodyText {
+  color: #ffffff !important;
+}
+
+/* Prevent double highlighting on nested elements */
+.navMenuOption:hover .listItem-content,
+.navMenuOption:hover .navMenuOption-listItem-content,
+.navMenuOption:hover .listItem-content-bg {
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+/* Selected state - blue left border */
+.navMenuOption-selected {
+  background: transparent !important;
+  border-left: 3px solid #2196F3 !important;
+  border-radius: 0 !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Keep child content transparent */
+.navMenuOption-selected .listItem-content,
+.navMenuOption-selected .navMenuOption-listItem-content,
+.navMenuOption-selected .listItem-content-bg {
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+/* COMPLETELY DISABLE pseudo-elements on selected items */
+.navMenuOption-selected .listItem-content-bg::before,
+.navMenuOption-selected .listItem-content-bg::after,
+.navMenuOption-selected .listItem-content::before,
+.navMenuOption-selected .listItem-content::after,
+.navMenuOption-selected .listItemContent-touchzoom::before,
+.navMenuOption-selected .listItemContent-touchzoom::after {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.navMenuOption-selected .listItemBodyText {
+  color: #ffffff !important;
+  font-weight: var(--font-weight-medium) !important;
+}
+
+.navMenuOption-selected:hover {
+  border-left-color: #64B5F6 !important;
+  box-shadow: inset 3px 0 0 0 #64B5F6 !important;
+}
+
+/* Alternative: Use box-shadow to ensure border is always visible */
+.navMenuOption-selected {
+  box-shadow: inset 3px 0 0 0 #2196F3 !important;
+}
+
+/* Remove borders from sidebar items */
+.navDrawerListItem .listItem-border {
+  border: none !important;
+}
+
+/* ============================================
+   HEADERS & FOOTERS
+   ============================================ */
+
+.skinHeader {
+  background: #000000 !important;
+  border-bottom: none !important;
+}
+
+/* Fix back button excessive indent */
+.skinHeader .headerButton,
+.skinHeader .headerBackButton,
+.skinHeader .btnHeaderButton {
+  margin-left: 0 !important;
+  padding-left: 8px !important;
+}
+
+.skinHeader .headerTabs {
+  padding-left: 0 !important;
+}
+
+.footer {
+  background: #000000 !important;
+  border-top: none !important;
+}
+
+/* ============================================
+   REMOVE ARTWORK/BACKDROPS
+   ============================================ */
+
+/* Hide background artwork */
+.backdropImage,
+.backgroundContainer,
+div.backdropContainer {
+  display: none !important;
+}
+
+/* Ensure solid black backgrounds */
+.itemBackdrop,
+.detailPagePrimaryContainer,
+.detailPageContent {
+  background: #000000 !important;
+  background-image: none !important;
+}
+
+/* ============================================
+   LISTS - Minimal Design
+   ============================================ */
+
+.listItem {
+  background: transparent !important;
+  border: none !important;
+  padding: 0px !important;
+}
+
+.listItem:hover {
+  background: rgba(20, 20, 20, 0.7) !important;
+}
+
+/* Remove rounded corners on hover */
+.listItem:hover,
+.listItem:hover .listItem-content,
+.listItem:hover .listItem-content-bg {
+  border-radius: 0 !important;
+}
+
+/* Remove rounded corners from hover overlay pseudo-elements */
+.listItem-hoverable:hover .listItem-content-bg::before,
+.listItem-content-bg::before,
+.listItem-content::before {
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Prevent double overlay on hover - aggressive targeting */
+.listItem:hover .listItem-content,
+.listItem:hover .listItem-content-bg,
+.listItem:hover .listItemContent-touchzoom,
+.listItem-hoverable:hover .listItem-content,
+.listItem-hoverable:hover .listItem-content-bg,
+.listItem-hoverable:hover .listItemContent-touchzoom {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Also remove background from before/after pseudo-elements */
+.listItem:hover .listItem-content::before,
+.listItem:hover .listItem-content-bg::before,
+.listItem-hoverable:hover .listItem-content::before,
+.listItem-hoverable:hover .listItem-content-bg::before {
+  background: transparent !important;
+  background-color: transparent !important;
+  opacity: 0 !important;
+}
+
+.listItemImageContainer {
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+.listItemBody {
+  padding: 0 12px !important;
+}
+
+/* ============================================
+   FORMS & INPUTS
+   ============================================ */
+
+/* Base input styling - only for standard form inputs */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+textarea:not(.txtNavDrawerSearch),
+select {
+  background: #0a0a0a !important;
+  border: 1px solid #1a1a1a !important;
+  border-radius: 4px !important;
+  color: #e9e9e9 !important;
+  transition: border-color var(--transition-fast) !important;
+}
+
+/* Standard text inputs get consistent padding and height */
+input[type="text"]:not(.txtNavDrawerSearch),
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="url"] {
+  padding: 9px 8px !important;
+  height: 38px !important;
+  line-height: normal !important;
+  box-sizing: border-box !important;
+}
+
+/* Textarea needs different height */
+textarea {
+  height: auto !important;
+  min-height: 80px !important;
+  padding: 9px 8px !important;
+  line-height: 1.5 !important;
+  border-radius: 4px !important;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #2a2a2a !important;
+  outline: none !important;
+  background: #0f0f0f !important;
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="url"]:hover,
+textarea:hover,
+select:hover {
+  border-color: #202020 !important;
+}
+
+/* Nav drawer search - consistent styling */
+.navDrawerSearchFieldContainer {
+  background: transparent !important;
+  border: none !important;
+  position: relative !important;
+}
+
+.inputContainer.navDrawerSearchFieldContainer {
+  background: transparent !important;
+  margin-bottom: 0 !important;
+}
+
+.txtNavDrawerSearch {
+  background: #0a0a0a !important;
+  border: 1px solid #1a1a1a !important;
+  border-radius: 4px !important;
+  color: #e9e9e9 !important;
+  padding: 9px 8px 9px 36px !important;
+  height: 38px !important;
+  line-height: normal !important;
+  width: 100% !important;
+  transition: border-color var(--transition-fast) !important;
+  box-sizing: border-box !important;
+}
+
+.txtNavDrawerSearch:focus {
+  border-color: #2a2a2a !important;
+  background: #0f0f0f !important;
+  outline: none !important;
+}
+
+.txtNavDrawerSearch:hover {
+  border-color: #202020 !important;
+}
+
+.navDrawerSearchIcon {
+  position: absolute !important;
+  left: 10px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  color: #888888 !important;
+  pointer-events: none !important;
+}
+
+/* Custom CSS textarea - larger and cleaner */
+textarea.txtCustomCss {
+  background: #0a0a0a !important;
+  border: 1px solid #1a1a1a !important;
+  color: #e9e9e9 !important;
+  font-family: 'Roboto', ui-monospace, SFMono-Regular, monospace !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  border-radius: 4px !important;
+  padding: 9px 8px !important;
+}
+
+/* Ensure all emby-input elements have consistent styling (except search) */
+.emby-input:not(.txtNavDrawerSearch),
+input.emby-input:not(.txtNavDrawerSearch),
+.emby-input-smaller:not(.txtNavDrawerSearch) {
+  background: #0a0a0a !important;
+  border: 1px solid #1a1a1a !important;
+  border-radius: 4px !important;
+  color: #e9e9e9 !important;
+  padding: 9px 8px !important;
+  height: 38px !important;
+  line-height: normal !important;
+  box-sizing: border-box !important;
+  transition: border-color var(--transition-fast) !important;
+}
+
+.emby-input:not(.txtNavDrawerSearch):focus,
+input.emby-input:not(.txtNavDrawerSearch):focus,
+.emby-input-smaller:not(.txtNavDrawerSearch):focus {
+  border-color: #2a2a2a !important;
+  background: #0f0f0f !important;
+  outline: none !important;
+}
+
+.emby-input:not(.txtNavDrawerSearch):hover,
+input.emby-input:not(.txtNavDrawerSearch):hover,
+.emby-input-smaller:not(.txtNavDrawerSearch):hover {
+  border-color: #202020 !important;
+}
+
+/* Select dropdowns - match input styling */
+.emby-select-wrapper {
+  background: transparent !important;
+  border: none !important;
+  display: inline-block !important;
+  position: relative !important;
+  width: 100% !important;
+}
+
+/* Ensure the wrapper doesn't add extra height */
+.emby-select-wrapper-smaller {
+  height: auto !important;
+  min-height: auto !important;
+}
+
+.emby-select,
+select.emby-select,
+.selectLocalizationLanguage {
+  background: #0a0a0a !important;
+  border: 1px solid #1a1a1a !important;
+  border-radius: 4px !important;
+  color: #e9e9e9 !important;
+  padding: 8px 32px 8px 8px !important; /* Right padding for arrow */
+  height: 38px !important;
+  line-height: 1.4 !important;
+  box-sizing: border-box !important;
+  transition: border-color var(--transition-fast) !important;
+  font-family: 'Roboto', sans-serif !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  width: 100% !important;
+}
+
+.emby-select:hover,
+select.emby-select:hover,
+.selectLocalizationLanguage:hover {
+  border-color: #202020 !important;
+}
+
+.emby-select:focus,
+select.emby-select:focus,
+.selectLocalizationLanguage:focus {
+  border-color: #2a2a2a !important;
+  background: #0f0f0f !important;
+  outline: none !important;
+}
+
+/* Select arrow container - position properly */
+.selectArrowContainer {
+  pointer-events: none !important;
+  position: absolute !important;
+  right: 8px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 24px !important;
+  width: 24px !important;
+}
+
+.selectArrow {
+  color: #888888 !important;
+  font-size: 20px !important;
+}
+
+/* Fix select container spacing */
+.selectContainer {
+  margin-bottom: 0 !important;
+}
+
+/* Increase width for subtitle/audio track dropdowns */
+.selectSubtitlesContainer,
+.selectAudioContainer,
+.trackSelectionFieldContainer {
+  min-width: 220px !important;
+  max-width: 220px !important;
+}
+
+.selectSubtitlesContainer .emby-select-wrapper,
+.selectAudioContainer .emby-select-wrapper,
+.trackSelectionFieldContainer .emby-select-wrapper {
+  min-width: 200px !important;
+  max-width: 200px !important;
+}
+
+.selectSubtitles,
+.selectAudio,
+.detailTrackSelect {
+  min-width: 200px !important;
+  max-width: 200px !important;
+}
+
+.selectLabel {
+  display: block !important;
+  margin-bottom: 4px !important;
+}
+
+/* Input labels */
+.inputLabel,
+.selectLabel {
+  color: #cccccc !important;
+  font-size: var(--text-sm) !important;
+  font-weight: var(--font-weight-medium) !important;
+  margin-bottom: var(--spacing-xs) !important;
+}
+
+/* Field descriptions */
+.fieldDescription {
+  color: #888888 !important;
+  font-size: var(--text-xs) !important;
+  margin-top: var(--spacing-xs) !important;
+}
+
+/* Checkboxes - remove borders and slim padding */
+.emby-checkbox,
+.chkListItemSelect,
+.chkItemSelect {
+  border: none !important;
+  background: transparent !important;
+  transform: scale(0.85) !important;
+}
+
+.chkListItemSelectContainer,
+.chkItemSelectContainer {
+  padding: 0 !important;
+  margin: 0 8px 0 0 !important;
+}
+
+.emby-checkbox-label {
+  padding: 0 !important;
+}
+
+/* Checkbox border container */
+.checkboxLabel {
+  border: none !important;
+}
+
+/* Card checkboxes - smaller */
+.chkCardSelect,
+.chkCardSelectContainer {
+  transform: scale(0.8) !important;
+}
+
+/* ============================================
+   SCROLLBARS - Minimal
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* ============================================
+   MISC CLEANUP
+   ============================================ */
+
+/* Remove rounded corners from dialogs and action sheets */
+.dialog,
+.actionSheet,
+.dialog-animated,
+.dialog-fullscreen-lowres {
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove minimum width from action sheets to fit content */
+.actionSheet,
+.dialog.actionSheet {
+  min-width: 0 !important;
+  width: auto !important;
+}
+
+/* Remove rounded corners from dialog content */
+.dialog .scrollSlider,
+.actionSheet .actionSheetScroller,
+.actionSheetScrollSlider {
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove padding from action sheet scroll slider */
+.actionsheetScrollSlider,
+.actionSheetScroller .scrollSlider {
+  padding: 0 !important;
+}
+
+/* Remove unnecessary borders */
+.formDialogHeader {
+  border-bottom: none !important;
+}
+
+/* Clean up sections */
+.verticalSection {
+  margin-bottom: 1em !important;
+}
+
+/* Remove excessive shadows */
+* {
+  box-shadow: none !important;
+}
+
+/* ============================================
+   DIALOG MARGINS
+   ============================================ */
+
+/* Fix margins on dialog inner content */
+.dialogContentInner.padded-left.padded-right {
+  padding-left: 2em !important;
+  padding-right: 2em !important;
+}
+
+/* Remove excessive margins on file scroller */
+.result-scroller {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* ============================================
+   HOVER BEHAVIORS
+   ============================================ */
+
+/* Link hover - blue underline */
+.button-link,
+.button-link-color-inherit,
+.sectionTitleTextButton,
+a.emby-button {
+  text-decoration: none !important;
+  border-bottom: 2px solid transparent !important;
+  transition: border-color var(--transition-fast) !important;
+  background: transparent !important;
+}
+
+.button-link:hover,
+.button-link-color-inherit:hover,
+.sectionTitleTextButton:hover,
+a.emby-button:hover {
+  background: transparent !important;
+  border-bottom-color: #2196F3 !important;
+}
+
+/* Exclude Emby logo from blue underline */
+.btnNavDrawerLogo,
+.btnNavDrawerLogo:hover,
+a.btnNavDrawerLogo,
+a.btnNavDrawerLogo:hover {
+  border-bottom: none !important;
+  border-bottom-color: transparent !important;
+}
+
+/* Ensure section titles display properly */
+.sectionTitle {
+  display: inline-block !important;
+}
+
+/* Remove any overlay backgrounds on hover */
+.button-hoverable:hover {
+  background: transparent !important;
+}
+
+/* Card overlay buttons - blue icon color ONLY, no background */
+.cardOverlayButton .paper-icon-button-light:hover,
+.cardOverlayFab-primary:hover,
+.cardOverlayButton-br .paper-icon-button-light:hover,
+.card .fab:hover,
+.cardBox .fab:hover,
+.paper-icon-button-light:hover {
+  color: #64B5F6 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Detail page buttons - blue icon AND text on hover */
+.detailButton:hover i,
+.detailButton:hover .md-icon,
+.detailButton:hover span,
+.detailButton:hover .button-text,
+.emby-button.detailButton:hover i,
+.emby-button.detailButton:hover .md-icon,
+.emby-button.detailButton:hover span,
+.emby-button.detailButton:hover .button-text,
+button.detailButton:hover i,
+button.detailButton:hover .md-icon,
+button.detailButton:hover span,
+button.detailButton:hover .button-text,
+.btnPlay:hover i,
+.btnPlay:hover span,
+.btnPlayTrailer:hover i,
+.btnPlayTrailer:hover span,
+.btnUserRating:hover i,
+.btnUserRating:hover .button-text,
+.btnPlaystate:hover i,
+.btnPlaystate:hover .button-text,
+.btnMoreCommands:hover i,
+.btnMoreCommands:hover .button-text,
+.btnDeleteItem:hover i,
+.btnDeleteItem:hover .button-text,
+.btnResume:hover i,
+.btnResume:hover span {
+  color: #64B5F6 !important;
+}
+
+/* Ensure NO background on any icon hover - but exclude logo */
+.headerButton:hover,
+.headerSettingsButton:hover,
+.headerSectionItem:hover:not(.pageTitle),
+button.paper-icon-button-light:hover,
+.emby-button:hover i,
+.fab:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+}
