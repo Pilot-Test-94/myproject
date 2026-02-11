@@ -1,9 +1,9 @@
 #EXTM3U  x-tvg-url="https://raw.githubusercontent.com/AqFad2811/epg/main/epg.xml",tvg-url="https://raw.githubusercontent.com/AqFad2811/epg/main/compressed/epg.xml.gz" refresh="1440" max-conn="1" refresh="24"
 
-#EXTINF:-1 group-title="siaranMy" tvg-id="TV1" tvg-name="TV1" tvg-logo="https://mifntechnology.github.io/siaranMy/logo/Tv1.png",TV1
+#EXTINF:-1 group-title="siaranMy" tvg-id="TV1" tvg-name="TV1" tvg-logo="https://github.com/Pilot-Test-94/myproject/blob/main/tv1.png?raw=true",TV1
 https://mifntechnology.github.io/siaranMy/channels/Tv1/index.m3u8
 
-#EXTINF:-1 group-title="siaranMy" tvg-id="TV2" tvg-name="TV2" tvg-logo="https://mifntechnology.github.io/siaranMy/logo/Tv2.png",TV2
+#EXTINF:-1 group-title="siaranMy" tvg-id="TV2" tvg-name="TV2" tvg-logo="https://github.com/Pilot-Test-94/myproject/blob/main/tv2.png?raw=true",TV2
 https://mifntechnology.github.io/siaranMy/channels/Tv2/index.m3u8
 
 EXTINF:-1  tvg-id="CHN" ch-number=" " tvg-name="RTB Sukmaindera" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEjhhU6oDs7CirF0lV4supeXmJ4A1S_hf6YwQKRQmSswvmv38cfEu7ODDG_DL7-EIP01jjtJ7K3uTFjywoxyGThFd4dRBe_SElCaGk6vmVRCve6dQ2eTKPIOxeD41VLf_dJfX00i9SjGQAo2z6GTnUe06Lhl0y4rOHSi1wao-FGFWtcjT4wjlbEV-cmExd4a" group-title=" MALAYSIA",337 RTB Sukmaindera
@@ -32,6 +32,7 @@ https://d1sq2slp9afh7o.cloudfront.net/smil:roll/playlist.m3u8?id=24095
 
 #EXTINF:-1 tvg-id="rtm_borak" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEiYDicgLl4zKkAtHt2ZK50P2q7G5yVP9kncATGYiWmBO7Wa-kbfgEtQBxMW0vGycHbQ_gTtescZYJZVSASPHtUU5CNmEZp9V2S6QqTop-XBS1psWNEPsM9AIzCsMYRo7OAJ4geM1RHBZWslw0aDOgLvLZKWPP3kGwFClGjQVbmcN76iYQFSvG7N2iu728gH" group-title=" MALAYSIA", RTM Aura
 https://d1sq2slp9afh7o.cloudfront.net/smil:aura/playlist.m3u8?id=24102
+
 
 
 
