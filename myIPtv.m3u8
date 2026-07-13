@@ -6,23 +6,23 @@ https://d1211whpimeups.cloudfront.net/smil:rtb1/playlist.m3u8
 #EXTINF:-1 tvg-id="RTB.Aneka" tvg-name="RTB Aneka" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEj3GUo8XpBycGfWhpQGXa3f598sOnxvbMZNZjRVTT_19dkiwIRkbCsgn4gEWoQ97pFfi2J4V6hq9qpj_oR7tQbDR8cRY8viy-GCBDBcPD9YLLmHPs9kHkVWo7bVuNdoGO_8j1ZPV6lQZMU1ypCQfyZjiU68MzDi_iyKUtdAQXvj4MWKydtPOm0g4db8NTVQ" group-title="MALAYSIA",RTB Aneka
 https://d1211whpimeups.cloudfront.net/smil:rtb2/chunklist_b1120000_sleng.m3u8
 
-#EXTINF:-1 tvg-id="RTM.Snap" tvg-name="RTM Snap" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEhLx5TV_hluEznzfncTFj_VL6fq8iqZfp3InzxsB6HxEuSK0b8l94mbJBPWtzNz2LhapKBK64aIxoTA7Tb3EqxyYicZJsV-YwY0ATIBwe3pEp806nhtcj0ls3lz77DZTq8mw9F-rcHSjXK5kUM9lPm8eHv7mpM2xsDQQc0-4HY8z_4uIE4rACtivD-7E82p" group-title="MALAYSIA",RTM Snap
+#EXTINF:-1 tvg-id="Snap" tvg-name="RTM Snap" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEhLx5TV_hluEznzfncTFj_VL6fq8iqZfp3InzxsB6HxEuSK0b8l94mbJBPWtzNz2LhapKBK64aIxoTA7Tb3EqxyYicZJsV-YwY0ATIBwe3pEp806nhtcj0ls3lz77DZTq8mw9F-rcHSjXK5kUM9lPm8eHv7mpM2xsDQQc0-4HY8z_4uIE4rACtivD-7E82p" group-title="MALAYSIA",RTM Snap
 https://d1sq2slp9afh7o.cloudfront.net/smil:snap/playlist.m3u8?id=24099
 
-#EXTINF:-1 tvg-id="RTM.Lead" tvg-name="RTM Lead" tvg-logo="https://rtm.glueapi.io/v3/content/24101/image/960x540/images.thumbnail" group-title="MALAYSIA",RTM Lead
+#EXTINF:-1 tvg-id="Lead" tvg-name="RTM Lead" tvg-logo="https://rtm.glueapi.io/v3/content/24101/image/960x540/images.thumbnail" group-title="MALAYSIA",RTM Lead
 https://d1sq2slp9afh7o.cloudfront.net/smil:lead/playlist.m3u8?id=24101
 
-#EXTINF:-1 tvg-id="RTM.Apetito" tvg-name="RTM Apetito" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEiFR6BXJIrvEaO-n2OynQq0ZXlIOB-tSEZTw9IdIs0ZHORLw309N1DzF9skFZ9DeuA_hiPpb1JP51XyAzdpFg2JOIOnyWNgXfz1K06fI8lYuzRkBwqY2kDx4MnbaXPZublkW_ygj2Mf5vUnddK4nMruBQ0a2mPRoUSZ8-WcqQOoc39MzCHgo1T_4PDg3udH" group-title="MALAYSIA",RTM Apetito
+#EXTINF:-1 tvg-id="Apetito" tvg-name="RTM Apetito" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEiFR6BXJIrvEaO-n2OynQq0ZXlIOB-tSEZTw9IdIs0ZHORLw309N1DzF9skFZ9DeuA_hiPpb1JP51XyAzdpFg2JOIOnyWNgXfz1K06fI8lYuzRkBwqY2kDx4MnbaXPZublkW_ygj2Mf5vUnddK4nMruBQ0a2mPRoUSZ8-WcqQOoc39MzCHgo1T_4PDg3udH" group-title="MALAYSIA",RTM Apetito
 https://d1sq2slp9afh7o.cloudfront.net/smil:apetito/playlist.m3u8?id=24100
 
-#EXTINF:-1 tvg-id="RTM.Fitrah" tvg-name="RTM Fitrah" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgKOTY-efioYmZWHpF4BfsJa4hx732yzXJQ9di9YCIAC53QnzJvHhZV7ggOqm0hrZJSrnFPHEcnOfWU8zevx4WmQgOWUak_DrrV0WYZSW32jnSrhW6CM5Vx3R0HIbr8gW3mVU8H5sux6_vG6nWrF5oPGU9x6Lx23pNQjPRIwktLkVnS_SvstarS2KCe2RhS" group-title="MALAYSIA",RTM Fitrah
+#EXTINF:-1 tvg-id="Fitrah" tvg-name="RTM Fitrah" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEgKOTY-efioYmZWHpF4BfsJa4hx732yzXJQ9di9YCIAC53QnzJvHhZV7ggOqm0hrZJSrnFPHEcnOfWU8zevx4WmQgOWUak_DrrV0WYZSW32jnSrhW6CM5Vx3R0HIbr8gW3mVU8H5sux6_vG6nWrF5oPGU9x6Lx23pNQjPRIwktLkVnS_SvstarS2KCe2RhS" group-title="MALAYSIA",RTM Fitrah
 https://d1sq2slp9afh7o.cloudfront.net/smil:fitrah/playlist.m3u8?id=24103
 
-#EXTINF:-1 tvg-id="RTM.Junior" tvg-name="RTM Junior" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEiEGDH-ac6YyRIA6msgkt2aApoPCkd15qD8xCVCgedi5IxJdbNqzoLN0sRj-46WYyKePvBVadNAcFVH-WYzt9_i65Z5CiSkGwpntiHxTn_mlm6V25iBukGAIAlWnC4IR3f8oht39tdbPnUbGX4mGINjMmQORo-ms1iyxG3QYUvmyluSMZroawEVeuCn6wBU" group-title="MALAYSIA",RTM Junior
+#EXTINF:-1 tvg-id="Junior" tvg-name="RTM Junior" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEiEGDH-ac6YyRIA6msgkt2aApoPCkd15qD8xCVCgedi5IxJdbNqzoLN0sRj-46WYyKePvBVadNAcFVH-WYzt9_i65Z5CiSkGwpntiHxTn_mlm6V25iBukGAIAlWnC4IR3f8oht39tdbPnUbGX4mGINjMmQORo-ms1iyxG3QYUvmyluSMZroawEVeuCn6wBU" group-title="MALAYSIA",RTM Junior
 https://d1sq2slp9afh7o.cloudfront.net/smil:jr/playlist.m3u8?id=24104
 
-#EXTINF:-1 tvg-id="RTM.Roll" tvg-name="RTM Roll" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEhueEbQ7iVrVXeoVGbPvha5st7XaBDKuy2YkgcDLsj62uxWCXbnrBRk9e7feqJyxzcOJ7Lh4X0lvUL2smiWQzzVl2nL2tvpXZcMPP_O0qA4eG8sX_sSa3G8MppKETzF4kUCu7g8ibjG3lfrL3v1ifB-jIMD4g-mhu9PP_QN6pfv4C-6g3bvpzkF-Yaj7VsT" group-title="MALAYSIA",RTM Roll
+#EXTINF:-1 tvg-id="Roll" tvg-name="RTM Roll" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEhueEbQ7iVrVXeoVGbPvha5st7XaBDKuy2YkgcDLsj62uxWCXbnrBRk9e7feqJyxzcOJ7Lh4X0lvUL2smiWQzzVl2nL2tvpXZcMPP_O0qA4eG8sX_sSa3G8MppKETzF4kUCu7g8ibjG3lfrL3v1ifB-jIMD4g-mhu9PP_QN6pfv4C-6g3bvpzkF-Yaj7VsT" group-title="MALAYSIA",RTM Roll
 https://d1sq2slp9afh7o.cloudfront.net/smil:roll/playlist.m3u8?id=24095
 
-#EXTINF:-1 tvg-id="RTM.Aura" tvg-name="RTM Aura" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEiYDicgLl4zKkAtHt2ZK50P2q7G5yVP9kncATGYiWmBO7Wa-kbfgEtQBxMW0vGycHbQ_gTtescZYJZVSASPHtUU5CNmEZp9V2S6QqTop-XBS1psWNEPsM9AIzCsMYRo7OAJ4geM1RHBZWslw0aDOgLvLZKWPP3kGwFClGjQVbmcN76iYQFSvG7N2iu728gH" group-title="MALAYSIA",RTM Aura
+#EXTINF:-1 tvg-id="Aura" tvg-name="RTM Aura" tvg-logo="https://blogger.googleusercontent.com/img/a/AVvXsEiYDicgLl4zKkAtHt2ZK50P2q7G5yVP9kncATGYiWmBO7Wa-kbfgEtQBxMW0vGycHbQ_gTtescZYJZVSASPHtUU5CNmEZp9V2S6QqTop-XBS1psWNEPsM9AIzCsMYRo7OAJ4geM1RHBZWslw0aDOgLvLZKWPP3kGwFClGjQVbmcN76iYQFSvG7N2iu728gH" group-title="MALAYSIA",RTM Aura
 https://d1sq2slp9afh7o.cloudfront.net/smil:aura/playlist.m3u8?id=24102
